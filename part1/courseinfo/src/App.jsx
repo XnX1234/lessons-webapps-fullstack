@@ -7,6 +7,13 @@ function App() {
 	const part3 = "Part 3";
 
 	return (
+		<Mainf />
+	)
+}
+
+function Mainf()
+{
+	return (
 		<div>
 			<span>
 				<h1 className='h1_part'>{part1}</h1>
