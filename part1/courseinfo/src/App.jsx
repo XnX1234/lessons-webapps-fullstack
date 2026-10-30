@@ -2,17 +2,16 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-	const part1 = "Part 1";
-	const part2 = "Part 2";
-	const part3 = "Part 3";
-
 	return (
 		<Mainf />
 	)
 }
 
-function Mainf()
-{
+function Mainf() {
+	const part1 = "Part 1";
+	const part2 = "Part 2";
+	const part3 = "Part 3";
+
 	return (
 		<div>
 			<span>
