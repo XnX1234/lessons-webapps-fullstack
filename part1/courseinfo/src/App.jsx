@@ -25,7 +25,6 @@ function Mainf() {
 				<Level_lf getlevel={0} getpart={part1} />
 				<Level_lf getlevel={1} getpart={part2} />
 				<Level_lf getlevel={2} getpart={part3} />
-				<Level_lf getlevel={3} getpart={part3} />
 			</div>
 		</div>
 	)
@@ -61,17 +60,17 @@ function Level_lf({getlevel, getpart})
 	{
 		ReadFrom = Level_1_lf;
 	}
-	else if(getlevel === 1)
+	else if(getlevel === 2)
 	{
 		ReadFrom = Level_2_lf;
 	}
 	else
 	{
-		ReadFrom = () => {
-			<h3 style="color: red; font-style: bold;">
+		return (
+			<h3 style={{ color: "red", fontWeight: "bold" }}>
 				Undefined!!! ---&gt; &#91; Nie ma takiej części &#93;
 			</h3>
-		}
+		)
 	}
 	
 	return (
