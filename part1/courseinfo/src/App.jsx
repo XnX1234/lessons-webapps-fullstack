@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import './App.css'
 
 const exes = [10, 7, 14]
 let party = [];
