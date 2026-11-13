@@ -2,8 +2,11 @@ import { useState } from 'react'
 import './App.css'
 
 const exes = [10, 7, 14]
+let party = [];
 
 function App() {
+	console.log("[]: Uzytkownik weszedl na strone!");
+	setTimeout(() => {console.log("[]: Minelo 10 sek. od wejscia na strone")}, 10000);
 	return (
 		<>
 			<Mainf />
@@ -17,13 +20,22 @@ function Mainf() {
 	const part1 = "Part 1";
 	const part2 = "Part 2";
 	const part3 = "Part 3";
+	const part3_new = {part: "Part 3", level: 2}
+
+	party[0] = {part: part1, level: 0};
+	party.push({part: part2, level: 1});
+	party.push(part3_new);
+
+	var partylog = party.concat();
+	partylog.forEach((val) => {val['part'] += "-to jest czesc"});
+	console.log(partylog);
 
 	return (
 		<div>
 			<Title_lf kurs={kurs} />
 			<div className='zawartosc_class'>
-				<Level_lf getlevel={0} getpart={part1} />
-				<Level_lf getlevel={1} getpart={part2} />
+				<Level_lf getlevel={0} getpart={party[0]["part"]} /> {/* getpart to zmienna part elementu 0*/}
+				<Level_lf getlevel={party[1].level} getpart={party[1]['part']} />
 				<Level_lf getlevel={2} getpart={part3} />
 			</div>
 		</div>
@@ -32,6 +44,7 @@ function Mainf() {
 
 function Sum_lf()
 {
+	console.log("liczba zadań to suma: " + exes);
 	return (
 		<div>
 			<span>
