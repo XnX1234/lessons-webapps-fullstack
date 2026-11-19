@@ -1,6 +1,8 @@
+import { ReRenderBYXN } from "./main.jsx"
 
 const exes = [10, 7, 14]
 let party = [];
+let counter_fajny = 0;
 
 function App() {
 	console.log("[]: Uzytkownik weszedl na strone!");
@@ -98,6 +100,10 @@ function Level_lf({getlevel, getpart})
 const Level_0_lf = () => {
 	return (
 		<>
+			<p/>
+			<div id="KlIKEr">
+				<KliKERF />
+			</div>
 		</>
 	)
 }
@@ -110,6 +116,19 @@ const Level_1_lf = () => {
 const Level_2_lf = () => {
 	return (
 		<>
+		</>
+	)
+}
+
+let KliKERF = () => {
+	return (
+		<>
+			klIkNIĘto {counter_fajny}
+			<button onClick={() => {
+				counter_fajny++;
+				console.log("[App::Counter]: Fajny counter wynosi teraz " + counter_fajny);
+				ReRenderBYXN("KlIKEr", <KliKERF />);
+			}}>KLikNij aBy DodaĆ</button>
 		</>
 	)
 }
