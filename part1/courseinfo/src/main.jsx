@@ -6,8 +6,3 @@ createRoot(document.getElementById('root')).render(
     <App />
 )
 
-const rKlIKEr = createRoot(document.getElementById("KlIKEr"))
-export const ReRenderBYXN = (id, target) => {
-    //let lr = createRoot(document.getElementById(id))
-    rKlIKEr.render(target);
-}
